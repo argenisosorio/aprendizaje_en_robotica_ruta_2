@@ -22,22 +22,22 @@
       .list-group-item.active {
         z-index: 2;
         color: #fff;
-        background-color: #00a4e1 !important;
+        background-color: #d26da1 !important;
         border-color: #0d6efd;
       }
       .btn-success {
         width: 100%;
         background: #fff;
-        color: #00a4e1;
-        border-color: #00a4e1;
+        color: #d26da1;
+        border-color: #d26da1;
       }
       .btn-success.active {
         color: #fff;
-        background-color: #00a4e1 !important;
-        border-color: #0d6efd;
+        background-color: #d26da1 !important;
+        border-color: #d26da1;
       }
       .btn-success:hover {
-        background: #00a4e1;
+        background: #d26da1;
         border-color: #fff;
       }
       /* Estilos generales para todos los tamaños de pantalla */
@@ -108,17 +108,6 @@
         }
       }
 
-      /*
-      body {
-          display: flex;
-          flex-direction: column;
-          height: 100vh;
-          margin: 0;
-          justify-content: center;
-          align-items: center;
-          font-family: Arial, sans-serif;
-      }
-      */
       .container {
           display: flex;
           width: 80%;
@@ -127,15 +116,15 @@
           margin-bottom: 20px;
       }
       .left, .right {
-          width: 50%;
-          display: grid;
-          grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px */
-          grid-template-rows: repeat(4, 100px);    /* 4 filas de 100px */
-          gap: 10px;
-          padding: 10px;
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px */
+        grid-template-rows: repeat(4, 100px);    /* 4 filas de 100px */
+        gap: 10px;
+        padding: 10px;
       }
       .left {
-          border-right: 2px solid #000;
+        border-right: 2px solid #000;
       }
       .box {
           width: 100px; /* Fijo a 100px */
@@ -181,7 +170,7 @@
   </head>
 <body>
   <!-- Banner -->
-  <div class="container-fluidd">
+  <div>
     <a href="index.html">
       <img
         id="my-img"
@@ -197,14 +186,14 @@
   <!-- Breadcrumb -->
   <div class="container-fluid">
     <p>
-      <nav aria-label="breadcrumb" style="color: #00a4e1;font-size: 17px;">
+      <nav aria-label="breadcrumb" style="color: #d26da1;font-size: 17px;">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="index.html">
               <i class="fa-solid fa-house"></i> Inicio
             </a>
           </li>
-          <li class="breadcrumb-item"><a href="#">Descubre</a></li>
+          <li class="breadcrumb-item"><a href="#">Conoce</a></li>
           <li class="breadcrumb-item active" aria-current="page">Iniciemos</li>
         </ol>
       </nav>
@@ -216,7 +205,7 @@
     class="text-center mb-3"
     style="font-size: 50px;"
   >
-    <img src="static/img/icono_robot_azul.png" width="50px" class="mb-2">
+    <img src="static/img/icono_robot_rosa.png" width="50px" class="mb-2">
     Iniciemos
   </h1>
 
@@ -277,10 +266,11 @@
       <div
         class="col-9"
         style="
-          border: ridge 1px #00a4e1;
+          border: ridge 1px #d26da1;
           border-radius: 5px;
         "
       >
+        <!-- container -->
         <div class="container">
           <!-- Contenedor izquierdo con 12 cuadros para completar el puzzle -->
           <div class="left">
@@ -296,57 +286,59 @@
             <div class="box" data-drop="true"></div>
             <div class="box" data-drop="true"></div>
             <div class="box" data-drop="true"></div>
-        </div>
+          </div>
 
-        <!-- Contenedor derecho con 12 cuadros arrastrables -->
-        <div class="right" id="right-boxes">
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/7.png" alt="Imagen 7">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/2.png" alt="Imagen 2">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/6.png" alt="Imagen 6">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/3.png" alt="Imagen 3">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/8.png" alt="Imagen 8">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/10.png" alt="Imagen 10">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/5.png" alt="Imagen 5">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/1.png" alt="Imagen 1">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/4.png" alt="Imagen 4">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/12.png" alt="Imagen 12">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/9.png" alt="Imagen 9">
-          </div>
-          <div class="box draggable" draggable="true">
-            <img src="static/img/Leccion-2/puzzle_robot/11.png" alt="Imagen 11">
+          <!-- Contenedor derecho con 12 cuadros arrastrables -->
+          <div class="right" id="right-boxes">
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/7.png" alt="Imagen 7">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/2.png" alt="Imagen 2">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/6.png" alt="Imagen 6">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/3.png" alt="Imagen 3">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/8.png" alt="Imagen 8">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/10.png" alt="Imagen 10">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/5.png" alt="Imagen 5">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/1.png" alt="Imagen 1">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/4.png" alt="Imagen 4">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/12.png" alt="Imagen 12">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/9.png" alt="Imagen 9">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/11.png" alt="Imagen 11">
+            </div>
           </div>
         </div>
+        <!-- End container -->
+
+        <!-- Botón para reiniciar el puzzle -->
+        <button class="reset-button" id="resetButton">Reiniciar Puzzle</button>
       </div>
       <!-- End Right Column -->
-
-      <!-- Botón para reiniciar el puzzle -->
-      <button class="reset-button" id="resetButton">Reiniciar Puzzle</button>
     </div>
   </div>
 
   <!-- Footer -->
-  <div class="container-fluid" style="background: #00a4e1; padding: 5px;">
+  <div class="container-fluid" style="background: #d26da1; padding: 5px;">
     <div class="text-center img-zoom mb-3 mt-4">
       <a href="http://www.cenditel.gob.ve/" target="_blank">
         <img src="static/img/logo-cenditel.png" width="7%" class="mb-3">
