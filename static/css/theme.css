@@ -2,18 +2,22 @@
   background: url(../img/Leccion-1/leccion-1-background.png) no-repeat center center;
   background-size: cover;
 }
+
 .leccion-2 {
   background: url(../img/Leccion-2/leccion-2-background.png) no-repeat center center;
   background-size: cover;
 }
+
 .leccion-3 {
   background: url(../img/Leccion-3/leccion-3-background.png) no-repeat center center;
   background-size: cover;
 }
+
 .leccion-4 {
   background: url(../img/Leccion-4/leccion-4-background.png) no-repeat center center;
   background-size: cover;
 }
+
 .img-rotate:hover {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg); /* Opcional para navegadores antiguos */
@@ -22,13 +26,16 @@
   -ms-transform: rotate(360deg); /* Opcional para navegadores antiguos */
   transition: transform 2s ease;
 }
+
 a {
   text-decoration: none;
   color: inherit; /* Usa este valor si quieres que el enlace tome el color del elemento padre */
 }
+
 a:hover {
   color: #000000;
 }
+
 .img-zoom {
   transform:scale(1);
   -ms-transform:scale(1);
@@ -40,6 +47,7 @@ a:hover {
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
 }        
+
 .img-zoom:hover {
   transform:scale(1.1);
   -ms-transform:scale(1.1);
@@ -49,20 +57,27 @@ a:hover {
 }
 
 .banner-container {
-    position: relative;
-  }
-  .banner-hover-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    transition: opacity 0.3s ease-in-out;
-  }
-  .banner-container a:hover .banner-hover-img {
-    display: block;
-  }
-  .banner-container a:hover .banner-img {
-    display: none;
-  }
+  position: relative;
+}
+
+.banner-hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.banner-container a:hover .banner-hover-img {
+  display: block;
+}
+
+.banner-container a:hover .banner-img {
+  display: none;
+}
+
+.screwdriver-cursor:hover {
+  cursor: url("../img/cursor.png"), auto;
+}
