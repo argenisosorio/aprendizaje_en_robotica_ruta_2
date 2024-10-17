@@ -34,6 +34,11 @@ a {
 
 a:hover {
   color: #000000;
+  cursor: url("../img/cursor.png"), auto;
+}
+
+.btn:hover {
+  cursor: url("../img/cursor.png"), auto;
 }
 
 .img-zoom {
