@@ -418,6 +418,110 @@
           </div>
         </div>
         <!-- Final Adivinanza 2 -->
+
+        <br>
+
+        <!-- Adivinanza 3 -->
+        <div
+          style="
+            border: ridge 1px #00a4e1;
+            border-radius: 5px;
+            padding: 10px;
+            background: #FFFFFF;
+          "
+        >
+          <div class="text-center mt-4 mb-2">
+            <video
+              controls
+              style="width: 85%; height: auto;"
+              src="static/video/adivinanza_3.mp4"
+            >
+            </video>
+          </div>
+          <div class="mb-3">
+            <div class="row text-center mt-4">
+              <div class="col-4">
+                <img
+                  src="static/img/Leccion-1/tijera.png"
+                  width="50%"
+                  class="mb-3 img-zoom-max"
+                >
+                <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-text="¡Incorrecto!"
+                  >
+                    <b>Tijera</b>
+                </button>
+                <!-- Final Button trigger modal -->
+              </div>
+              <div class="col-4">
+                <img
+                  src="static/img/Leccion-1/lapiz.png"
+                  width="50%"
+                  class="mb-3 img-zoom-max"
+                >
+                <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-text="¡Acertaste!"
+                  >
+                  <b>Lápiz</b>
+                </button>
+                <!-- Final Button trigger modal -->
+              </div>
+              <div class="col-4">
+                <img
+                  src="static/img/Leccion-1/borrador.png"
+                  width="50%"
+                  class="mb-3 img-zoom-max"
+                >
+                <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-text="¡Incorrecto!"
+                  >
+                    <b>Borrador</b>
+                </button>
+                <!-- Final Button trigger modal -->
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body d-flex flex-column align-items-center">
+                    <img
+                      id="modalImage"
+                      src=""
+                      alt=""
+                      style="width: 50%; display: none;"
+                    >
+                    <h1 class="text-center" id="modalText"></h1>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Final de Modal -->
+          </div>
+        </div>
+        <!-- Final Adivinanza 3 -->
       </div>
       <!-- End Right Column -->
     </div>
