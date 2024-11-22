@@ -244,7 +244,7 @@
       <a href="http://www.cenditel.gob.ve/" target="_blank">
         <img src="static/img/logo-cenditel.png" width="7%" class="mb-3">
         <br>
-        <b style="font-size: 15px; color: #fff">Desarrollado por CENDITEL</b>
+        <b id="typewriter" style="font-size: 15px; color: #fff"></b>
       </a>
     </div>
   </div>
@@ -259,6 +259,41 @@
     function hover(element) {
       element.setAttribute('src', 'static/img/banner2.png');
     }
+  </script>
+
+  <script>
+    const text = "Desarrollado por CENDITEL";
+    const typewriterElement = document.getElementById("typewriter");
+    let index = 0;
+    let deleting = false;
+
+    function typeEffect() {
+      // Mostrar o borrar caracteres
+      typewriterElement.textContent = text.substring(0, index);
+
+      if (!deleting) {
+        if (index < text.length) {
+          index++;
+        } else {
+          deleting = true;
+          setTimeout(typeEffect, 1000); // Pausa antes de borrar
+          return;
+        }
+      } else {
+        if (index > 0) {
+          index--;
+        } else {
+          deleting = false;
+        }
+      }
+
+      // Cambiar la velocidad dependiendo de si escribe o borra
+      const speed = deleting ? 50 : 100;
+      setTimeout(typeEffect, speed);
+    }
+
+    // Iniciar el efecto
+    typeEffect();
   </script>
 </body>
 </html>
