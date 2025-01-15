@@ -218,7 +218,12 @@
         "
       >
         <div class="text-center mt-5 mb-3">
-          <img class="img-zoom" src="static/img/robot-de-pie.jpg" width="40%">
+          <img
+            id="slideshow"
+            class="img-rotate"
+            src="static/img/robot-de-pie-1.webp"
+            width="35%"
+          >
         </div>
       </div>
       <!-- End Right Column -->
@@ -238,6 +243,34 @@
   <!-- Final del Footer -->
 
   <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /*
+     * La imagen del robot cambia cada 2 segundos con una transición suave entre
+     * cada cambio en bucle infinito.
+    */
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = [
+        "static/img/robot-de-pie-1.webp",
+        "static/img/robot-de-pie-2.webp",
+        "static/img/robot-de-pie-3.webp",
+        "static/img/robot-de-pie-4.webp"
+      ];
+      const imgElement = document.getElementById("slideshow");
+      let index = 0;
+      setInterval(() => {
+          // Oculta la imagen actual
+          imgElement.classList.add("hidden");
+          setTimeout(() => {
+              // Cambia la imagen una vez oculta
+              index = (index + 1) % images.length;
+              imgElement.src = images[index];
+              // Muestra la nueva imagen
+              imgElement.classList.remove("hidden");
+          }, 1000); // Espera que la transición termine (1s)
+      }, 1500); // Cambia cada 2 segundos
+    });
+  </script>
 
   <script>
     function unhover(element) {
