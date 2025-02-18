@@ -107,65 +107,6 @@
           font-size: 50px;
         }
       }
-
-      .container {
-          display: flex;
-          width: 80%;
-          height: auto; /* Ajusta el tamaño según los cuadros */
-          border: 2px solid #000;
-          margin-bottom: 20px;
-      }
-      .left, .right {
-        width: 50%;
-        display: grid;
-        grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px */
-        grid-template-rows: repeat(4, 100px);    /* 4 filas de 100px */
-        gap: 10px;
-        padding: 10px;
-      }
-      .left {
-        border-right: 2px solid #000;
-      }
-      .box {
-          width: 100px; /* Fijo a 100px */
-          height: 100px; /* Fijo a 100px */
-          border: 2px solid #000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 24px;
-          cursor: pointer;
-          position: relative;
-      }
-      .box[data-drop="true"] {
-          background-color: #f0f0f0;
-      }
-      .box[data-drop="false"] {
-          background-color: lightgray;
-      }
-      .draggable {
-          background-color: lightcoral;
-          color: #fff;
-      }
-      .dragging {
-          opacity: 0.5;
-      }
-      .reset-button {
-          padding: 10px 20px;
-          background-color: #007BFF;
-          color: white;
-          border: none;
-          cursor: pointer;
-          font-size: 16px;
-      }
-      .reset-button:hover {
-          background-color: #0056b3;
-      }
-      .box img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
     </style>
   </head>
 <body>
@@ -193,8 +134,8 @@
               <i class="fa-solid fa-house"></i> Inicio
             </a>
           </li>
-          <li class="breadcrumb-item"><a href="#">Conoce</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Iniciemos</li>
+          <li class="breadcrumb-item"><a href="leccion-2.html">Conoce</a></li>
+          <li class="breadcrumb-item active" aria-current="page">La Robótica</li>
         </ol>
       </nav>
     </p>
@@ -206,7 +147,7 @@
     style="font-size: 50px;"
   >
     <img src="../../static/img/icono_robot_rosa.png" width="50px" class="mb-2">
-    Iniciemos
+    La Robótica
   </h1>
 
   <div class="container-fluid">
@@ -217,12 +158,12 @@
       <!-- Left Column -->
       <div class="col-3">
         <a href="leccion-2.html">
-          <button type="button" class="btn btn-success text-start active">
+          <button type="button" class="btn btn-success text-start">
             <b style="font-size: 25px;">Iniciemos</b>
           </button>
         </a>
         <a href="leccion-2-la-robotica.html">
-          <button type="button" class="btn btn-success text-start">
+          <button type="button" class="btn btn-success text-start active">
             -----
             <b>La Robótica</b>
           </button>
@@ -256,7 +197,9 @@
           border-radius: 5px;
         "
       >
-      <img src="../../static/img/Leccion-2/1.png" width="100%" class="mb-3">
+        <div class="text-center mt-5 mb-5">
+          XXXXX
+        </div>
       </div>
       <!-- End Right Column -->
     </div>
@@ -283,110 +226,6 @@
     function hover(element) {
       element.setAttribute('src', '../../static/img/banner2.png');
     }
-
-    // Script del drag and drop.
-    const draggables = document.querySelectorAll('.draggable');
-    const dropZones = document.querySelectorAll('.box[data-drop="true"]');
-    const resetButton = document.getElementById('resetButton');
-    const rightBoxesContainer = document.getElementById('right-boxes');
-
-    // Función para manejar el arrastre
-    draggables.forEach(draggable => {
-      draggable.addEventListener('dragstart', (e) => {
-        draggable.classList.add('dragging');
-        e.dataTransfer.setData('text/plain', draggable.innerHTML);
-        setTimeout(() => draggable.style.display = 'none', 0);
-      });
-
-      draggable.addEventListener('dragend', () => {
-        draggable.classList.remove('dragging');
-        draggable.style.display = 'block';
-      });
-    });
-
-    // Permitir soltar en el área de la izquierda
-    dropZones.forEach(zone => {
-      zone.addEventListener('dragover', (e) => {
-        e.preventDefault();
-      });
-
-      zone.addEventListener('drop', (e) => {
-        e.preventDefault();
-        const draggedItem = document.querySelector('.dragging');
-        zone.innerHTML = draggedItem.innerHTML;
-        zone.style.backgroundColor = draggedItem.style.backgroundColor;
-        if (draggedItem.querySelector('img')) {
-          const img = draggedItem.querySelector('img').cloneNode(true);
-          zone.innerHTML = ''; // Limpiar el contenido previo
-          zone.appendChild(img); // Insertar la imagen en la zona de destino
-        }
-        draggedItem.remove(); // Elimina el cuadro del área derecha
-      });
-    });
-
-    // Función para reiniciarel puzzle.
-    resetButton.addEventListener('click', () => {
-      // Limpiar las zonas de la izquierda
-      dropZones.forEach(zone => {
-        zone.innerHTML = '';
-        zone.style.backgroundColor = '#f0f0f0';
-      });
-
-      // Restaurar los cuadros en la derecha
-      rightBoxesContainer.innerHTML = `
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/7.png" alt="Imagen 7">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/2.png" alt="Imagen 2">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/6.png" alt="Imagen 6">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/3.png" alt="Imagen 3">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/8.png" alt="Imagen 8">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/10.png" alt="Imagen 10">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/5.png" alt="Imagen 5">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/1.png" alt="Imagen 1">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/4.png" alt="Imagen 4">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/12.png" alt="Imagen 12">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/9.png" alt="Imagen 9">
-        </div>
-        <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/11.png" alt="Imagen 11">
-        </div>
-      `;
-
-      // Reasignar eventos drag a los nuevos elementos
-      const newDraggables = document.querySelectorAll('.draggable');
-      newDraggables.forEach(draggable => {
-        draggable.addEventListener('dragstart', (e) => {
-          draggable.classList.add('dragging');
-          e.dataTransfer.setData('text/plain', draggable.innerHTML);
-          setTimeout(() => draggable.style.display = 'none', 0);
-        });
-
-        draggable.addEventListener('dragend', () => {
-          draggable.classList.remove('dragging');
-          draggable.style.display = 'block';
-        });
-      });
-    });
   </script>
 
   <script>

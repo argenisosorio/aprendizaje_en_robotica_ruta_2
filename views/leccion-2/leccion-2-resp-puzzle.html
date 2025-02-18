@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <link rel="icon" href="../../static/img/favicon.png">
+    <link rel="icon" href="static/img/favicon.png">
     <title>Curso - Aprendizaje en Robótica</title>
     <!-- Bootstrap core CSS -->
-    <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- font-awesome-6 -->
-    <link href="../../static/font-awesome-6/css/fontawesome.css" rel="stylesheet" />
-    <link href="../../static/font-awesome-6/css/all.css" rel="stylesheet" />
+    <link href="static/font-awesome-6/css/fontawesome.css" rel="stylesheet" />
+    <link href="static/font-awesome-6/css/all.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="../../static/css/theme.css" rel="stylesheet">
+    <link href="static/css/theme.css" rel="stylesheet">
     <style>
       .list-group-item {
         background-color: #fff !important;
@@ -171,10 +171,10 @@
 <body>
   <!-- Banner -->
   <div>
-    <a href="../../index.html">
+    <a href="index.html">
       <img
         id="my-img"
-        src="../../static/img/banner.png"
+        src="static/img/banner.png"
         onmouseover="hover(this);"
         onmouseout="unhover(this);"
         width="100%"
@@ -189,7 +189,7 @@
       <nav aria-label="breadcrumb" style="color: #d26da1;font-size: 17px;">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="../../index.html">
+            <a href="index.html">
               <i class="fa-solid fa-house"></i> Inicio
             </a>
           </li>
@@ -205,7 +205,7 @@
     class="text-center mb-3"
     style="font-size: 50px;"
   >
-    <img src="../../static/img/icono_robot_rosa.png" width="50px" class="mb-2">
+    <img src="static/img/icono_robot_rosa.png" width="50px" class="mb-2">
     Iniciemos
   </h1>
 
@@ -216,30 +216,30 @@
     >
       <!-- Left Column -->
       <div class="col-3">
-        <a href="leccion-2.html">
+        <a href="leccion-1.html">
           <button type="button" class="btn btn-success text-start active">
             <b style="font-size: 25px;">Iniciemos</b>
           </button>
         </a>
-        <a href="leccion-2-la-robotica.html">
+        <a href="leccion-1-adivinanzas.html">
           <button type="button" class="btn btn-success text-start">
             -----
             <b>La Robótica</b>
           </button>
         </a>
-        <a href="leccion-2-areas-de-la-robotica.html">
+        <a href="leccion-1-que-aprendimos.html">
           <button type="button" class="btn btn-success text-start">
             -----
             <b>Áreas de la Robótica</b>
           </button>
         </a>
-        <a href="leccion-2-estructura-mecanica-robots.html">
+        <a href="leccion-1-que-aprendimos.html">
           <button type="button" class="btn btn-success text-start">
             -----
             <b>Estructura mecánica de los robots</b>
           </button>
         </a>
-        <a href="leccion-2-que-aprendimos.html">
+        <a href="leccion-1-que-aprendimos.html">
           <button type="button" class="btn btn-success text-start">
             -----
             <b>¿Qué aprendimos?</b>
@@ -256,7 +256,68 @@
           border-radius: 5px;
         "
       >
-      <img src="../../static/img/Leccion-2/1.png" width="100%" class="mb-3">
+        <!-- container -->
+        <div class="container">
+          <!-- Contenedor izquierdo con 12 cuadros para completar el puzzle -->
+          <div class="left">
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+            <div class="box" data-drop="true"></div>
+          </div>
+
+          <!-- Contenedor derecho con 12 cuadros arrastrables -->
+          <div class="right" id="right-boxes">
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/7.png" alt="Imagen 7">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/2.png" alt="Imagen 2">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/6.png" alt="Imagen 6">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/3.png" alt="Imagen 3">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/8.png" alt="Imagen 8">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/10.png" alt="Imagen 10">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/5.png" alt="Imagen 5">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/1.png" alt="Imagen 1">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/4.png" alt="Imagen 4">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/12.png" alt="Imagen 12">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/9.png" alt="Imagen 9">
+            </div>
+            <div class="box draggable" draggable="true">
+              <img src="static/img/Leccion-2/puzzle_robot/11.png" alt="Imagen 11">
+            </div>
+          </div>
+        </div>
+        <!-- End container -->
+
+        <!-- Botón para reiniciar el puzzle -->
+        <button class="reset-button" id="resetButton">Reiniciar Puzzle</button>
       </div>
       <!-- End Right Column -->
     </div>
@@ -266,7 +327,7 @@
   <div class="container-fluid" style="background: #d26da1; padding: 5px;">
     <div class="text-center img-zoom mb-3 mt-4">
       <a href="http://www.cenditel.gob.ve/" target="_blank">
-        <img src="../../static/img/logo-cenditel.png" width="7%" class="mb-3">
+        <img src="static/img/logo-cenditel.png" width="7%" class="mb-3">
         <br>
         <b id="typewriter" style="font-size: 15px; color: #fff"></b>
       </a>
@@ -274,14 +335,14 @@
   </div>
   <!-- Final del Footer -->
 
-  <script src="../../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script>
     function unhover(element) {
-      element.setAttribute('src', '../../static/img/banner.png');
+      element.setAttribute('src', 'static/img/banner.png');
     }
     function hover(element) {
-      element.setAttribute('src', '../../static/img/banner2.png');
+      element.setAttribute('src', 'static/img/banner2.png');
     }
 
     // Script del drag and drop.
@@ -335,40 +396,40 @@
       // Restaurar los cuadros en la derecha
       rightBoxesContainer.innerHTML = `
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/7.png" alt="Imagen 7">
+          <img src="static/img/Leccion-2/puzzle_robot/7.png" alt="Imagen 7">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/2.png" alt="Imagen 2">
+          <img src="static/img/Leccion-2/puzzle_robot/2.png" alt="Imagen 2">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/6.png" alt="Imagen 6">
+          <img src="static/img/Leccion-2/puzzle_robot/6.png" alt="Imagen 6">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/3.png" alt="Imagen 3">
+          <img src="static/img/Leccion-2/puzzle_robot/3.png" alt="Imagen 3">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/8.png" alt="Imagen 8">
+          <img src="static/img/Leccion-2/puzzle_robot/8.png" alt="Imagen 8">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/10.png" alt="Imagen 10">
+          <img src="static/img/Leccion-2/puzzle_robot/10.png" alt="Imagen 10">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/5.png" alt="Imagen 5">
+          <img src="static/img/Leccion-2/puzzle_robot/5.png" alt="Imagen 5">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/1.png" alt="Imagen 1">
+          <img src="static/img/Leccion-2/puzzle_robot/1.png" alt="Imagen 1">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/4.png" alt="Imagen 4">
+          <img src="static/img/Leccion-2/puzzle_robot/4.png" alt="Imagen 4">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/12.png" alt="Imagen 12">
+          <img src="static/img/Leccion-2/puzzle_robot/12.png" alt="Imagen 12">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/9.png" alt="Imagen 9">
+          <img src="static/img/Leccion-2/puzzle_robot/9.png" alt="Imagen 9">
         </div>
         <div class="box draggable" draggable="true">
-          <img src="../../static/img/Leccion-2/puzzle_robot/11.png" alt="Imagen 11">
+          <img src="static/img/Leccion-2/puzzle_robot/11.png" alt="Imagen 11">
         </div>
       `;
 
