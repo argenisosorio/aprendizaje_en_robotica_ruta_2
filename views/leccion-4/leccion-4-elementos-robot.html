@@ -212,28 +212,16 @@
           border-radius: 5px;
         "
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
+        <a href="leccion-4-elementos-robot-humanoide.html">
+          <div class="text-center mt-5 mb-3">
+            <img
+              id="slideshow"
+              class="img-rotate"
+              src="../../static/img/robot-de-pie-1.webp"
+              width="35%"
+            >
+          </div>
+        </a>
       </div>
       <!-- End Right Column -->
     </div>
@@ -263,6 +251,34 @@
   </script>
 
   <script>
+    /*
+     * La imagen del robot cambia cada 2 segundos con una transición suave entre
+     * cada cambio en bucle infinito.
+    */
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = [
+        "../../static/img/robot-de-pie-1.webp",
+        "../../static/img/robot-de-pie-2.webp",
+        "../../static/img/robot-de-pie-3.webp",
+        "../../static/img/robot-de-pie-4.webp",
+        "../../static/img/favicon.png",
+        "../../static/img/favicon-al-reves.png"
+      ];
+      const imgElement = document.getElementById("slideshow");
+      let index = 0;
+      setInterval(() => {
+          // Oculta la imagen actual
+          imgElement.classList.add("hidden");
+          setTimeout(() => {
+              // Cambia la imagen una vez oculta
+              index = (index + 1) % images.length;
+              imgElement.src = images[index];
+              // Muestra la nueva imagen
+              imgElement.classList.remove("hidden");
+          }, 1000); // Espera que la transición termine (1s)
+      }, 1500); // Cambia cada 2 segundos
+    });
+
     const text = "Desarrollado por CENDITEL";
     const typewriterElement = document.getElementById("typewriter");
     let index = 0;
