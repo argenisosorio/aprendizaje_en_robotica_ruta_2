@@ -169,6 +169,9 @@
     </style>
   </head>
 <body>
+  <!-- Barra de progreso -->
+  <div id="progressBarRosada"></div>
+
   <!-- Banner -->
   <div>
     <a href="index.html">
@@ -483,6 +486,29 @@
 
     // Iniciar el efecto
     typeEffect();
+  </script>
+
+  <script>
+    // Selecciona la barra de progreso
+    const progressBarRosada = document.getElementById('progressBarRosada');
+
+    // Escuchar el evento de scroll
+    window.addEventListener('scroll', () => {
+      // Altura total del documento
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      // Altura visible de la ventana
+      const clientHeight = document.documentElement.clientHeight;
+
+      // Distancia desplazada desde la parte superior
+      const scrollTop = document.documentElement.scrollTop;
+
+      // Calcular el porcentaje de progreso
+      const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+      // Actualizar el ancho de la barra
+      progressBarRosada.style.width = `${scrollPercentage}%`;
+    });
   </script>
 </body>
 </html>

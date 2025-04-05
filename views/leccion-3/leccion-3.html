@@ -110,6 +110,9 @@
     </style>
   </head>
 <body>
+  <!-- Barra de progreso -->
+  <div id="progressBarVerde"></div>
+
   <!-- Banner -->
   <div class="container-fluidd">
     <a href="../../index.html">
@@ -165,32 +168,19 @@
         <a href="leccion-1-adivinanzas.html">
           <button type="button" class="btn btn-success text-start">
             -----
-            <b>Adivina</b>
+            <b>Programación</b>
           </button>
         </a>
         <a href="leccion-1-que-aprendimos.html">
           <button type="button" class="btn btn-success text-start">
             -----
-            <b>¿Qué aprendimos?</b>
-          </button>
-        </a>
-        <br>
-        <br>
-        <a href="leccion-1-robotica.html">
-          <button type="button" class="btn btn-success text-start">
-            <b style="font-size: 25px;">Robótica</b>
-          </button>
-        </a>
-        <a href="leccion-1-que-es-la-robotica.html">
-          <button type="button" class="btn btn-success text-start">
-            -----
-            <b>¿Qué es la robótica?</b>
+            <b>¿Cómo funciona la programación?</b>
           </button>
         </a>
         <a href="leccion-1-partes-del-robot.html">
           <button type="button" class="btn btn-success text-start">
             -----
-            <b>Partes del robot</b>
+            <b>Scratch</b>
           </button>
         </a>
         <br>
@@ -294,6 +284,29 @@
 
     // Iniciar el efecto
     typeEffect();
+  </script>
+
+  <script>
+    // Selecciona la barra de progreso
+    const progressBarVerde = document.getElementById('progressBarVerde');
+
+    // Escuchar el evento de scroll
+    window.addEventListener('scroll', () => {
+    // Altura total del documento
+    const scrollHeight = document.documentElement.scrollHeight;
+
+    // Altura visible de la ventana
+    const clientHeight = document.documentElement.clientHeight;
+
+    // Distancia desplazada desde la parte superior
+    const scrollTop = document.documentElement.scrollTop;
+
+    // Calcular el porcentaje de progreso
+    const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+    // Actualizar el ancho de la barra
+    progressBarVerde.style.width = `${scrollPercentage}%`;
+    });
   </script>
 </body>
 </html>

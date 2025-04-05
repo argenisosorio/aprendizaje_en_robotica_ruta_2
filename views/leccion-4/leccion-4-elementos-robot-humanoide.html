@@ -110,6 +110,9 @@
     </style>
   </head>
 <body>
+  <!-- Barra de progreso -->
+  <div id="progressBarAmarilla"></div>
+
   <!-- Banner -->
   <div class="container-fluidd">
     <a href="../../index.html">
@@ -276,6 +279,29 @@
 
     // Iniciar el efecto
     typeEffect();
+  </script>
+
+  <script>
+    // Selecciona la barra de progreso
+    const progressBarAmarilla = document.getElementById('progressBarAmarilla');
+
+    // Escuchar el evento de scroll
+    window.addEventListener('scroll', () => {
+    // Altura total del documento
+    const scrollHeight = document.documentElement.scrollHeight;
+
+    // Altura visible de la ventana
+    const clientHeight = document.documentElement.clientHeight;
+
+    // Distancia desplazada desde la parte superior
+    const scrollTop = document.documentElement.scrollTop;
+
+    // Calcular el porcentaje de progreso
+    const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+    // Actualizar el ancho de la barra
+    progressBarAmarilla.style.width = `${scrollPercentage}%`;
+    });
   </script>
 </body>
 </html>

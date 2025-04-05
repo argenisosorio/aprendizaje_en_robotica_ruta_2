@@ -109,6 +109,9 @@
   <audio id="hover-sound4" src="static/audio/Robot_sound_effect.mp3"></audio>
   <audio id="hover-sound5" src="static/audio/voice-robot-cenditel.mp3"></audio>
 
+  <!-- Barra de progreso -->
+  <div id="progressBar"></div>
+
   <!-- Banner -->
   <div class="container-fluidd">
     <a href="index.html" id="hover-span0">
@@ -414,6 +417,29 @@
 
     // Iniciar el efecto
     typeEffect();
+  </script>
+
+  <script>
+    // Selecciona la barra de progreso
+    const progressBar = document.getElementById('progressBar');
+
+    // Escuchar el evento de scroll
+    window.addEventListener('scroll', () => {
+    // Altura total del documento
+    const scrollHeight = document.documentElement.scrollHeight;
+
+    // Altura visible de la ventana
+    const clientHeight = document.documentElement.clientHeight;
+
+    // Distancia desplazada desde la parte superior
+    const scrollTop = document.documentElement.scrollTop;
+
+    // Calcular el porcentaje de progreso
+    const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+    // Actualizar el ancho de la barra
+    progressBar.style.width = `${scrollPercentage}%`;
+    });
   </script>
 </body>
 </html>
