@@ -99,9 +99,64 @@
           font-size: 11px;
         }
       }
+
+      .section0 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+      }
+
+      .section0.visible {
+        opacity: 1;
+      }
+
+      .section1 {
+        opacity: 0;
+        transform: translateX(-100px); /* Desplazamiento inicial desde la izquierda */
+        transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+      }
+
+      .section1.visible {
+        opacity: 1;
+        transform: translateX(0); /* Posición final */
+      }
+
+      .section2 {
+        opacity: 0;
+        transform: translateX(100px); /* Desplazamiento inicial desde la derecha */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .section2.visible {
+        opacity: 1;
+        transform: translateX(0); /* Posición final */
+      }
+
+      .section3 {
+        opacity: 0;
+        transform: translateX(-100px); /* Desplazamiento inicial desde la izquierda */
+        transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+      }
+
+      .section3.visible {
+        opacity: 1;
+        transform: translateX(0); /* Posición final */
+      }
+
+      .section4 {
+        opacity: 0;
+        transform: translateX(100px); /* Desplazamiento inicial desde la derecha */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .section4.visible {
+        opacity: 1;
+        transform: translateX(0); /* Posición final */
+      }
     </style>
   </head>
 <body>
+<!-- Barra de progreso -->
+<div id="progressBar"></div>
   <audio id="hover-sound0" src="static/audio/banner_sound_effect.mp3"></audio>
   <audio id="hover-sound1" src="static/audio/Robot_sound_effect.mp3"></audio>
   <audio id="hover-sound2" src="static/audio/Robot_sound_effect.mp3"></audio>
@@ -121,17 +176,16 @@
         onmouseover="hover(this);"
         onmouseout="unhover(this);"
         width="100%"
-        class="screwdriver-cursor"
+        class="screwdriver-cursor section0"
       />
     </a>
   </div>
   <!-- Final del Banner -->
 
-  <!--img src="static/img/index.png" width="100%" class="mt-3"-->
   <div class="container-fluid">
     <!-- Lección 1 -->
     <div class="row leccion-1">
-      <div class="col-4 text-center">
+      <div class="col-4 text-center section1">
         <a href="views/leccion-1/leccion-1.html" id="hover-span1">
           <img
             src="static/img/Leccion-1/leccion-1-logo.png"
@@ -149,7 +203,7 @@
     <div class="row leccion-2">
       <div class="col-8">
       </div>
-      <div class="col-4 text-center">
+      <div class="col-4 text-center section2">
         <a href="views/leccion-2/leccion-2.html" id="hover-span2">
           <img
             src="static/img/Leccion-2/leccion-2-logo.png"
@@ -163,7 +217,7 @@
 
     <!-- Lección 3 -->
     <div class="row leccion-3">
-      <div class="col-4 text-center">
+      <div class="col-4 text-center section3">
         <a href="views/leccion-3/leccion-3.html" id="hover-span3">
           <img
             src="static/img/Leccion-3/leccion-3-logo.png"
@@ -181,7 +235,7 @@
     <div class="row leccion-4 mb-5">
       <div class="col-8">
       </div>
-      <div class="col-4 text-center">
+      <div class="col-4 text-center section4">
         <a href="views/leccion-4/leccion-4.html" id="hover-span4">
           <img
             src="static/img/Leccion-4/leccion-4-logo.png"
@@ -363,25 +417,6 @@
       },
       "retina_detect": true
     });
-
-    /* ---- stats.js config ---- */
-    var count_particles, stats, update;
-    stats = new Stats;
-    stats.setMode(0);
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '0px';
-    stats.domElement.style.top = '0px';
-    document.body.appendChild(stats.domElement);
-    count_particles = document.querySelector('.js-count-particles');
-    update = function() {
-      stats.begin();
-      stats.end();
-      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-      }
-      requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
   </script>
 
   <script>
@@ -440,6 +475,63 @@
     // Actualizar el ancho de la barra
     progressBar.style.width = `${scrollPercentage}%`;
     });
+  </script>
+
+  <script>
+    // Script JavaScript para efecto de aparición de section0
+    const sections0 = document.querySelectorAll('.section0');
+    const observer0 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections0.forEach(section0 => observer0.observe(section0));
+
+    // Script JavaScript para efecto de aparición de section1
+    const sections1 = document.querySelectorAll('.section1');
+    const observer1 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections1.forEach(section1 => observer1.observe(section1));
+
+    // Script JavaScript para efecto de aparición de section2
+    const sections2 = document.querySelectorAll('.section2');
+    const observer2 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections2.forEach(section2 => observer2.observe(section2));
+
+    // Script JavaScript para efecto de aparición de section3
+    const sections3 = document.querySelectorAll('.section3');
+    const observer3 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections3.forEach(section3 => observer3.observe(section3));
+
+    // Script JavaScript para efecto de aparición de section4
+    const sections4 = document.querySelectorAll('.section4');
+    const observer4 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections4.forEach(section4 => observer4.observe(section4));
   </script>
 </body>
 </html>
