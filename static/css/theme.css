@@ -153,5 +153,5 @@ a:hover {
   height: 5px; /* Altura de la barra */
   background-color: #fbbf00; /* Color de la barra */
   width: 0%; /* Ancho inicial */
-  z-index: 1000; /* Aparece encima de todo */
+  z-index: 1000; /* Aparece encima de todo. */
 }
