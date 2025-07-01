@@ -371,6 +371,17 @@
         </div>
         <!-- Final de Botones del formulario -->
 
+        <!-- Siguiente módulo -->
+        <div id="next-section" style="display: none;">
+          <br>
+          <div class="text-center mt-5 mb-5">
+            <a href="../leccion-4/leccion-4.html">
+              <img src="../../static/img/Leccion-3/nina-next-4.png">
+            </a>
+          </div>
+        </div>
+        <!-- Final de Siguiente módulo -->
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -504,6 +515,8 @@
           '',
           'block'
         );
+        // Ocultar la sección siguiente.
+        document.getElementById('next-section').style.display = 'none';
         return;
       }
 
@@ -538,6 +551,8 @@
           '',
           'block'
         );
+        // Mostrar la sección siguiente
+        document.getElementById('next-section').style.display = 'block';
       } else {
         let mensaje = '';
 
@@ -574,6 +589,7 @@
       document.querySelectorAll('input[type="radio"]').forEach(radio => {
         radio.checked = false;
       });
+      document.getElementById('next-section').style.display = 'none';
     }
 
     /* Función para abrir el modal */
