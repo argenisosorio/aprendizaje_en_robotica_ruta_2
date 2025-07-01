@@ -398,7 +398,7 @@
                 >
                 <hr>
                 <h2 class="text-center" id="modalText"></h2>
-                <span class="text-center" id="helpText"></span>
+                <span id="helpText"></span>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -557,22 +557,22 @@
         let mensaje = '';
 
         if (respuesta1 !== correcto1) {
-          mensaje += '\n1';
+          mensaje += '💡 Pista 1: Recuerda que programar es decirle a la computadora exactamente qué hacer, paso a paso.<br><br>';
         }
         if (respuesta2 !== correcto2) {
-          mensaje += '\n2';
+          mensaje += '💡 Pista 2: Un algoritmo es como una receta que seguimos para lograr algo, ¿cuál opción se parece más a eso?<br><br>';
         }
         if (respuesta3 !== correcto3) {
-          mensaje += '\n3';
+          mensaje += '💡 Pista 3: Piensa en el primer paso que haces antes de cepillarte los dientes, ¿qué necesitas poner en el cepillo?<br><br>';
         }
         if (respuesta4 !== correcto4) {
-          mensaje += '\n4';
+          mensaje += '💡 Pista 4: Cuando sigues una receta, ¿qué tipo de instrucciones estás siguiendo?<br><br>';
         }
         if (respuesta5 !== correcto5) {
-          mensaje += '\n5';
+          mensaje += '💡 Pista 5: Observa los bloques de Scratch, ¿qué indica el color de cada uno sobre su función?<br><br>';
         }
         if (respuesta6 !== correcto6) {
-          mensaje += '\n6';
+          mensaje += '💡 Pista 6: Los bloques de colores en Scratch se usan para crear instrucciones, ¿qué puedes lograr al unirlos?<br><br>';
         }
 
         openModal(
@@ -604,7 +604,7 @@
       modalImageElement.src = imgSrc;
 
       document.getElementById('modalText').textContent = text;
-      document.getElementById('helpText').textContent = helpText;
+      document.getElementById('helpText').innerHTML = helpText;
       document.getElementById('modalImage').style.display = display;
 
       var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
