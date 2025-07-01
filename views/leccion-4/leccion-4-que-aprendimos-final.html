@@ -113,6 +113,7 @@
         display: flex;
         margin-bottom: 30px;
         width: 90%;
+        /*border: ridge 1px red !important;*/
       }
 
       .image-column, .drop-column {
@@ -129,29 +130,37 @@
       }
 
       .silueta {
-        width: 100px !important;
+        width: 130px !important;
       }
 
       .ojos {
-        width: 100px !important;
+        width: 130px !important;
       }
 
       .articulaciones {
-        width: 100px !important;
+        width: 130px !important;
       }
 
       .oreja {
-        width: 100px !important;
+        width: 130px !important;
       }
 
       .cintura {
-        width: 100px !important;
+        width: 130px !important;
+      }
+
+      .cabeza {
+        width: 130px !important;
+      }
+
+      .boca {
+        width: 130px !important;
       }
 
       .draggable-image {
         width: 150px; /* Adjust image size as needed */
         height: auto;
-        border: 2px solid #fbbf00;
+        /*border: 2px solid #fbbf00;*/
         border-radius: 8px;
         cursor: grab;
         transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
@@ -400,14 +409,14 @@
                 <img
                   src="../../static/img/Leccion-4/prueba/col-izq/Actuador.png"
                   alt="Puzzle Pieza 2"
-                  class="draggable-image"
+                  class="draggable-image boca"
                   draggable="true"
                   data-id="boca"
                 >
                 <img
                   src="../../static/img/Leccion-4/prueba/col-izq/Controlador.png"
                   alt="Puzzle Pieza 3"
-                  class="draggable-image"
+                  class="draggable-image cabeza"
                   draggable="true"
                   data-id="cabeza"
                 >
