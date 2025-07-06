@@ -28,7 +28,7 @@ body {
   -moz-transform: rotate(360deg); /* Opcional para navegadores antiguos */
   -o-transform: rotate(360deg); /* Opcional para navegadores antiguos */
   -ms-transform: rotate(360deg); /* Opcional para navegadores antiguos */
-  transition: transform 2s ease;
+  transition: transform 1s ease;
   filter: contrast(120%);
 }
 
