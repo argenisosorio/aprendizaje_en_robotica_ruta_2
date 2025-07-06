@@ -155,3 +155,17 @@ a:hover {
   width: 0%; /* Ancho inicial */
   z-index: 1000; /* Aparece encima de todo. */
 }
+
+.llave-inglesa {
+  cursor: url("../img/cursor-llave-inglesa.png"), auto;
+}
+
+.img-rotate-180:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg); /* Opcional para navegadores antiguos */
+  -moz-transform: rotate(360deg); /* Opcional para navegadores antiguos */
+  -o-transform: rotate(360deg); /* Opcional para navegadores antiguos */
+  -ms-transform: rotate(360deg); /* Opcional para navegadores antiguos */
+  transition: transform 1s ease;
+  filter: contrast(120%);
+}
